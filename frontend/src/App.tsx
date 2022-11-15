@@ -1,4 +1,4 @@
-import NotificationButton from '@comp/NotificationButton';
+import Header from '@comp/Header';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
@@ -8,16 +8,12 @@ import GlobalStyles from './styles/GlobalStyles';
 function App() {
   const { theme } = useTheme();
 
-  const test = () => {
-    console.log('Testeee');
-  };
-
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
 
-        <NotificationButton onClick={test}></NotificationButton>
+        <Header></Header>
       </ThemeProvider>
     </React.Fragment>
   );

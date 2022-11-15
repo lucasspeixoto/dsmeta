@@ -50,15 +50,10 @@ export default createGlobalStyle`
 
   .form-field {
     font-size: 15px;
-
     width: 100%;
-
     margin: 5px 0;
-
     padding: 10px;
-
     border-radius: 5px;
-
     border: 3px solid ${(props) => props.theme.colors.white};
 
     &:hover {
