@@ -1,13 +1,16 @@
-import './styles.css';
+import icon from '@assets/images/notification-icon.svg';
+import React, { ButtonHTMLAttributes } from 'react';
 
-function NotificationButton() {
-  return (
-    <>
-      <button className="notification-button" type="button">
-        Notificar
-      </button>
-    </>
-  );
-}
+import { Container } from './styles';
+
+type INotificationButton = ButtonHTMLAttributes<HTMLButtonElement>;
+
+const NotificationButton: React.FC<INotificationButton> = ({ ...rest }) => (
+  <Container>
+    <button {...rest}>
+      <img src={icon} alt="Notificar" />
+    </button>
+  </Container>
+);
 
 export default NotificationButton;

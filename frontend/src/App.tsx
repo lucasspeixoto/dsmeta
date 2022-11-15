@@ -8,12 +8,16 @@ import GlobalStyles from './styles/GlobalStyles';
 function App() {
   const { theme } = useTheme();
 
+  const test = () => {
+    console.log('Testeee');
+  };
+
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
 
-        <NotificationButton></NotificationButton>
+        <NotificationButton onClick={test}></NotificationButton>
       </ThemeProvider>
     </React.Fragment>
   );
