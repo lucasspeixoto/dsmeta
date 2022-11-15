@@ -1,14 +1,11 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyles from "./styles/GlobalStyles";
+import NotificationButton from '@comp/NotificationButton';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import { useTheme } from "./hooks/useTheme";
-import NotificationButton from "./components/NotificationButton";
+import { useTheme } from './hooks/useTheme';
+import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
-
-
-    
   const { theme } = useTheme();
 
   return (

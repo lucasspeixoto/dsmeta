@@ -3,7 +3,7 @@ import './styles.css';
 function NotificationButton() {
   return (
     <>
-      <button className='notification-button' type='button'>
+      <button className="notification-button" type="button">
         Notificar
       </button>
     </>
