@@ -1,3 +1,4 @@
+import { mixins } from '@styles/abstracts/mixins';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -25,9 +26,7 @@ export const Container = styled.div`
   }
 
   > button {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    ${mixins.noSelect}
     background: ${(props) => props.theme.colors.tertiary};
 
     > img {

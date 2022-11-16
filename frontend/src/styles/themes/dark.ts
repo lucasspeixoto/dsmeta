@@ -20,5 +20,11 @@ export default {
     generic: '#258FB0',
     recurring: '#4E41F0',
     eventual: '#D0CB4B',
+
+    thead: '#E9E9E9',
+  },
+
+  gradients: {
+    header: 'linear-gradient(180deg, #102347 0%, #181818 100%)',
   },
 };

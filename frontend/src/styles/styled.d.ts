@@ -23,6 +23,12 @@ declare module 'styled-components' {
       generic: string;
       recurring: string;
       eventual: string;
+
+      thead: string;
+    };
+
+    gradients: {
+      header: string;
     };
   }
 }

@@ -6,7 +6,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
   }
 
   html, body, #root {
@@ -61,7 +60,6 @@ export default createGlobalStyle`
       border: 3px solid ${(props) => props.theme.colors.generic};
     }
   }
-
 
   textarea {
 	  font-size: 5.5rem;

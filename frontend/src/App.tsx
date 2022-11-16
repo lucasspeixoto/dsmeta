@@ -1,4 +1,5 @@
 import Header from '@comp/Header';
+import Sales from '@comp/Sales';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
@@ -13,7 +14,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
 
-        <Header></Header>
+        <Header />
+
+        <Sales />
       </ThemeProvider>
     </React.Fragment>
   );

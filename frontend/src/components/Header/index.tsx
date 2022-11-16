@@ -6,7 +6,7 @@ import { Container } from './styles';
 const Header: React.FC = () => (
   <header>
     <Container>
-      <img src={logo} alt="Logo" />
+      <img className="noSelect" src={logo} alt="Logo" />
       <h1>DSMeta</h1>
       <p>
         Desenvolvidor por

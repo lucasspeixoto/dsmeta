@@ -30,6 +30,12 @@ interface ITheme {
     generic: string;
     recurring: string;
     eventual: string;
+
+    thead: string;
+  };
+
+  gradients: {
+    header: string;
   };
 }
 
@@ -41,7 +47,7 @@ export const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 export const ThemeProvider: React.FC<IThemeProvider> = ({ children }) => {
   const lastSelectedTheme = useMemo(() => {
-    return localStorage.getItem('@money-balance:theme');
+    return localStorage.getItem('@dsmeta:theme');
   }, []);
 
   const [theme, setTheme] = useState<ITheme>(
@@ -51,10 +57,10 @@ export const ThemeProvider: React.FC<IThemeProvider> = ({ children }) => {
   const toggleTheme = () => {
     if (theme.title === 'dark') {
       setTheme(light);
-      localStorage.setItem('@money-balance:theme', 'light');
+      localStorage.setItem('@dsmeta:theme', 'light');
     } else {
       setTheme(dark);
-      localStorage.setItem('@money-balance:theme', 'dark');
+      localStorage.setItem('@dsmeta:theme', 'dark');
     }
   };
 
