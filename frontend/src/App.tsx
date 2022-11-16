@@ -13,9 +13,7 @@ function App() {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-
         <Header />
-
         <Sales />
       </ThemeProvider>
     </React.Fragment>

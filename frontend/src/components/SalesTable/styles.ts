@@ -21,9 +21,10 @@ export const Table = styled.table`
     text-align: center;
   }
 
-  > tbody th {
-    height: 74px;
-    border-top: 10px solid ${(props) => props.theme.colors.white};
+  > tbody,
+  td {
+    height: 70px;
+    border-top: 1px solid ${(props) => props.theme.colors.white};
   }
 
   > tbody tr:hover > td {

@@ -1,8 +1,13 @@
-//import { mixins } from '@styles/abstracts/mixins';
+import { device } from '@styles/abstracts/medias';
+import DatePicker from 'react-datepicker';
 import styled from 'styled-components';
 
 export const SalesContainer = styled.section`
-  padding: 40px 5px;
+  padding: 40px 140px;
+
+  @media ${device.tablet} {
+    padding: 40px 2px;
+  }
 `;
 
 export const Container = styled.div`
@@ -25,17 +30,17 @@ export const Card = styled.div`
 
 export const FormContainer = styled.div`
   margin-bottom: 16px;
-  max-width: 300px;
+`;
 
-  > input {
-    width: 100%;
-    height: 46px;
-    background-color: ${(props) => props.theme.colors.primary};
-    border: 1px solid ${(props) => props.theme.colors.grey};
-    border-radius: 5px;
-    color: ${(props) => props.theme.colors.white};
-    opacity: 0.7;
-    padding: 0 20px;
-    font-size: 18px;
-  }
+export const StyledDatePicker = styled(DatePicker)`
+  width: 100%;
+  max-width: 150px;
+  height: 46px;
+  background-color: ${(props) => props.theme.colors.primary};
+  border: 1px solid ${(props) => props.theme.colors.grey};
+  border-radius: 5px;
+  color: ${(props) => props.theme.colors.white};
+  opacity: 0.7;
+  padding: 0 20px;
+  font-size: 18px;
 `;

@@ -43,7 +43,6 @@ export default createGlobalStyle`
   .error-message {
     font-size: 12px;
     font-weight: bold;
-
 	  color: #d75757;
   }
 
