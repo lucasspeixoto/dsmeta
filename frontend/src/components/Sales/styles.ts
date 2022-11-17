@@ -30,6 +30,7 @@ export const Card = styled.div`
 
 export const FormContainer = styled.div`
   margin-bottom: 16px;
+  width: 150px;
 `;
 
 export const StyledDatePicker = styled(DatePicker)`

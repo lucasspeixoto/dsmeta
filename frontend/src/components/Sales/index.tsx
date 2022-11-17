@@ -28,6 +28,8 @@ const Sales: React.FC = () => {
                 selected={minDate}
                 onChange={(date: Date) => setMinDate(date)}
                 dateFormat="dd/MM/yyyy"
+                isClearable
+                maxDate={new Date()}
               />
             </FormContainer>
             <FormContainer>
@@ -35,6 +37,8 @@ const Sales: React.FC = () => {
                 selected={maxDate}
                 onChange={(date: Date) => setMaxDate(date)}
                 dateFormat="dd/MM/yyyy"
+                isClearable
+                maxDate={new Date()}
               />
             </FormContainer>
 
