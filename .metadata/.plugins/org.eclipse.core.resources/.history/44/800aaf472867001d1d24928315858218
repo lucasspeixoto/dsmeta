@@ -1,0 +1,13 @@
+ package com.devsuperior.dsmeta.services;
+
+public class FormatService {
+	public String completeToLeft(int value, char c, int size) {
+		String result = Integer.toString(value);
+
+		if (value < 10) {
+			result = '0' + result;
+		}
+
+		return result;
+	}
+}
