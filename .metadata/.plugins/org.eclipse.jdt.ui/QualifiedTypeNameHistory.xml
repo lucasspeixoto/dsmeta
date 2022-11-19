@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.twilio.rest.api.v2010.account.Message"/>
+    <fullyQualifiedTypeName name="com.twilio.type.PhoneNumber"/>
+    <fullyQualifiedTypeName name="com.devsuperior.dsmeta.services.SmsService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.devsuperior.dsmeta.repositories.SaleRepository"/>
+    <fullyQualifiedTypeName name="com.devsuperior.dsmeta.entities.Sale"/>
+    <fullyQualifiedTypeName name="com.devsuperior.dsmeta.utilities.FormatString"/>
+    <fullyQualifiedTypeName name="com.devsuperior.dsmeta.utilities.FormatService"/>
+</qualifiedTypeNameHistroy>
