@@ -28,7 +28,7 @@ const Header: React.FC = () => {
 
           <h1>DSMeta</h1>
           <p>
-            Desenvolvidor por
+            Desenvolvido por
             <a
               href="https://lucasspeixoto.github.io/profile/#/"
               target="_blank"

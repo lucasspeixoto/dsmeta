@@ -9,7 +9,6 @@ export default {
     white: '#000',
     black: '#f5f5f5',
     grey: '#6B6B6B',
-    pink: '#ff6b72',
 
     success: '#03BB85',
     info: '#3B5998',

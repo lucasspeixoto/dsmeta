@@ -8,6 +8,10 @@ export const SalesContainer = styled.section`
   @media ${device.tablet} {
     padding: 40px 2px;
   }
+
+  @media ${device.mobileL} {
+    padding: 40px 0px;
+  }
 `;
 
 export const Container = styled.div`
@@ -30,12 +34,16 @@ export const Card = styled.div`
 
 export const FormContainer = styled.div`
   margin-bottom: 16px;
-  width: 150px;
+  width: 160px;
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 `;
 
 export const StyledDatePicker = styled(DatePicker)`
   width: 100%;
-  max-width: 150px;
+  max-width: 160px;
   height: 46px;
   background-color: ${(props) => props.theme.colors.primary};
   border: 1px solid ${(props) => props.theme.colors.grey};
@@ -44,4 +52,8 @@ export const StyledDatePicker = styled(DatePicker)`
   opacity: 0.7;
   padding: 0 20px;
   font-size: 18px;
+
+  @media ${device.mobileL} {
+    max-width: 100%;
+  }
 `;

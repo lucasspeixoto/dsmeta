@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -40,6 +41,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'max-len': ['warn', { code: 80 }],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {

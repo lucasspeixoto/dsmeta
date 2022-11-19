@@ -1,3 +1,4 @@
+import Footer from '@comp/Footer';
 import Header from '@comp/Header';
 import Sales from '@comp/Sales';
 import React from 'react';
@@ -15,6 +16,7 @@ function App() {
         <GlobalStyles />
         <Header />
         <Sales />
+        <Footer />
       </ThemeProvider>
     </React.Fragment>
   );

@@ -15,7 +15,9 @@ export const Toggle: React.FC<IToggleProps> = ({ checked, onChange }) => {
 
   return (
     <Container>
-      <ToggleLabel>{theme.title === 'dark' ? <BsSunFill /> : <BsSun />}</ToggleLabel>
+      <ToggleLabel>
+        {theme.title === 'dark' ? <BsSunFill /> : <BsSun />}
+      </ToggleLabel>
       <ToggleSelector
         checked={checked}
         uncheckedIcon={false}
