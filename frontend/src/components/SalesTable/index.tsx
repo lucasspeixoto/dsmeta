@@ -3,14 +3,14 @@ import { Sale } from '@models/sale';
 import React from 'react';
 import { dateFormat } from 'utils/date';
 
-import { NotificationButtonContainer, Table } from './styles';
+import { NoSales, NotificationButtonContainer, Table } from './styles';
 
 interface SalesTableProps {
   sales: Sale[];
 }
 
 const SalesTable: React.FC<SalesTableProps> = ({ sales }) => {
-  return (
+  return sales.length > 0 ? (
     <Table>
       <thead>
         <tr>
@@ -44,6 +44,10 @@ const SalesTable: React.FC<SalesTableProps> = ({ sales }) => {
         })}
       </tbody>
     </Table>
+  ) : (
+    <NoSales>
+      <p>Nenhuma venda para o período selecionado!</p>
+    </NoSales>
   );
 };
 

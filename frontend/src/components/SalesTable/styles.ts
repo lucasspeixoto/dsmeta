@@ -41,3 +41,15 @@ export const NotificationButtonContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const NoSales = styled.div`
+  display: flex;
+  justify-content: center;
+
+  > p {
+    margin: 2rem 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: ${(props) => props.theme.colors.warning};
+  }
+`;
