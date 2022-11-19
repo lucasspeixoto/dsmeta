@@ -1,5 +1,8 @@
 import icon from '@assets/images/notification-icon.svg';
+import axios from 'axios';
 import React, { ButtonHTMLAttributes } from 'react';
+import { getNotificationRoute } from 'utils/endpoints';
+import { BASE_URL } from 'utils/request';
 
 import { Container } from './styles';
 
@@ -9,7 +12,8 @@ type INotificationButton = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const NotificationButton: React.FC<INotificationButton> = ({ ...rest }) => {
   const sendSaleNotificationHandler = () => {
-    console.log(rest.saleid);
+    const endpoint = getNotificationRoute(rest.saleid);
+    axios.get(`${BASE_URL}/${endpoint}`);
   };
   return (
     <Container>

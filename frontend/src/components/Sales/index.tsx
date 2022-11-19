@@ -4,7 +4,7 @@ import SalesTable from '@comp/SalesTable';
 import { Sale } from '@models/sale';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { getEndpoint } from 'utils/build-sale-endpoint-request';
+import { getSalesRoute } from 'utils/endpoints';
 import { BASE_URL } from 'utils/request';
 
 import {
@@ -24,11 +24,10 @@ const Sales: React.FC = () => {
   const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-    const endpoint = getEndpoint(minDate, maxDate);
+    const endpoint = getSalesRoute(minDate, maxDate);
 
     axios.get(`${BASE_URL}/${endpoint}`).then((response) => {
       const salesContent = response.data as Sale[];
-      console.log(`Vendas: ${salesContent.length}`);
       setSales(salesContent);
     });
   }, [minDate, maxDate]);
