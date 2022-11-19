@@ -2,14 +2,21 @@ import { mixins } from '@styles/abstracts/mixins';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  background: ${(props) => props.theme.gradients.header};
+`;
+
+export const ToggleContainer = styled.div`
+  padding: 0.5rem;
+  float: right;
+`;
+
+export const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.7rem;
   width: 100%;
   height: 220px;
-
-  background: ${(props) => props.theme.gradients.header};
 
   > img {
     margin-top: 0.1rem;
