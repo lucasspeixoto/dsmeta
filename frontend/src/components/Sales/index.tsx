@@ -1,7 +1,10 @@
 import 'react-datepicker/dist/react-datepicker.css';
 
 import SalesTable from '@comp/SalesTable';
-import React, { useState } from 'react';
+import { Sale } from '@models/sale';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { BASE_URL } from 'utils/request';
 
 import {
   Card,
@@ -16,6 +19,15 @@ const Sales: React.FC = () => {
   const [minDate, setMinDate] = useState<Date>(lastYearDate);
 
   const [maxDate, setMaxDate] = useState<Date>(new Date());
+
+  const [sales, setSales] = useState<Sale[]>([]);
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}/sales`).then((response) => {
+      const salesContent = response.data as Sale[];
+      setSales(salesContent);
+    });
+  }, []);
 
   return (
     <main>
@@ -41,8 +53,7 @@ const Sales: React.FC = () => {
                 maxDate={new Date()}
               />
             </FormContainer>
-
-            <SalesTable />
+            <SalesTable sales={sales} />
           </Card>
         </Container>
       </SalesContainer>

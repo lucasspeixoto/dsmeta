@@ -9,7 +9,8 @@
       "@comp/*": ["./components/*"],
       "@contx/*": ["./contexts/*"],
       "@hooks/*": ["./hooks/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@models/*": ["./models/*"]
     },
     "allowJs": false,
     "skipLibCheck": false,

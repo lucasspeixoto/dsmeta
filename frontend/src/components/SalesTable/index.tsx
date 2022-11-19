@@ -1,45 +1,14 @@
 import NotificationButton from '@comp/NotificationButton';
+import { Sale } from '@models/sale';
 import React from 'react';
 
 import { NotificationButtonContainer, Table } from './styles';
 
-const SalesTable: React.FC = () => {
-  /* const sales: {
-    id: string;
-    date: string;
-    seller: string;
-    visits: number;
-    sales: number;
-    total: number;
-  }[] = [
-    {
-      id: '#1',
-      date: '16/11/2022',
-      seller: 'Liana',
-      visits: 15,
-      sales: 11,
-      total: 45879,
-    },
-    {
-      id: '#2',
-      date: '15/11/2022',
-      seller: 'Lucas',
-      visits: 15,
-      sales: 10,
-      total: 33879,
-    },
-    {
-      id: '#3',
-      date: '16/11/2022',
-      seller: 'Cecília',
-      visits: 12,
-      sales: 7,
-      total: 16987,
-    },
-  ];
+interface SalesTableProps {
+  sales: Sale[];
+}
 
-  const columns = ['id', 'date', 'seller', 'visits', 'sales', 'total']; */
-
+const SalesTable: React.FC<SalesTableProps> = ({ sales }) => {
   return (
     <Table>
       <thead>
@@ -54,48 +23,24 @@ const SalesTable: React.FC = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="show992">#341</td>
-          <td className="show576">08/07/2022</td>
-          <td>Anakin</td>
-          <td className="show992">15</td>
-          <td className="show992">11</td>
-          <td>R$ 55300.00</td>
-          <td>
-            <NotificationButtonContainer>
-              {' '}
-              <NotificationButton />
-            </NotificationButtonContainer>
-          </td>
-        </tr>
-        <tr>
-          <td className="show992">#341</td>
-          <td className="show576">08/07/2022</td>
-          <td>Anakin</td>
-          <td className="show992">15</td>
-          <td className="show992">11</td>
-          <td>R$ 55300.00</td>
-          <td>
-            <NotificationButtonContainer>
-              {' '}
-              <NotificationButton />
-            </NotificationButtonContainer>
-          </td>
-        </tr>
-        <tr>
-          <td className="show992">#341</td>
-          <td className="show576">08/07/2022</td>
-          <td>Anakin</td>
-          <td className="show992">15</td>
-          <td className="show992">11</td>
-          <td>R$ 55300.00</td>
-          <td>
-            <NotificationButtonContainer>
-              {' '}
-              <NotificationButton />
-            </NotificationButtonContainer>
-          </td>
-        </tr>
+        {sales.map((sale) => {
+          return (
+            <tr key={sale.id}>
+              <td className="show992">{sale.id}</td>
+              <td className="show576">{sale.date}</td>
+              <td>{sale.sellerName}</td>
+              <td className="show992">{sale.visited}</td>
+              <td className="show992">{sale.deals}</td>
+              <td>{sale.amount}</td>
+              <td>
+                <NotificationButtonContainer>
+                  {' '}
+                  <NotificationButton saleid={sale.id} />
+                </NotificationButtonContainer>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );
