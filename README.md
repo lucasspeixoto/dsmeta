@@ -4,7 +4,7 @@
 
 ## 💻 Projeto
 
-[Ds Meta](https://github.com/lucasspeixoto/dentalar_bots) é um projeto full stack com React e Spring boot para iniciar um processo de aprendizado de Java e criação de REST API's. 
+[Ds Meta](https://dsmeta-lspeixoto.netlify.app/) é um projeto full stack com React e Spring boot para iniciar um processo de aprendizado de Java e criação de REST API's. 
 O sistema é um sistema de visualização de vendas realizadas por vendedores que possibilita enviar detalhes das vendas por SMS
 
 ## ✨ Tecnologias
